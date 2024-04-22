@@ -1,4 +1,5 @@
 import React from 'react';
+import { LivePortal } from '../components/LivePortal';
 
 function MainPage() {
 
@@ -119,8 +120,10 @@ function MainPage() {
                 </div>
                 <div className="col-span-2 bg-gray-300">
 
-                    <div className="h-[45%]  bg-gray-300">Right top part</div>
-                    <div className="h-[55%]  bg-gray-600">Right bottom part</div>
+                    <div className="h-[60%]  bg-gray-300  overflow-auto" style={{ scrollbarWidth: 'thin' }} >
+                        <LivePortal />
+                    </div>
+                    <div className="h-[40%]  bg-gray-600">Right bottom part</div>
                 </div>
 
             </div>
