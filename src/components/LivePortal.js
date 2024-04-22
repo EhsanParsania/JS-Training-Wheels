@@ -231,27 +231,27 @@ const Expression = ({ fromAstOf, expr, parent, parens }) => {
     }
 
     // AssignmentExpression operator:string left:Identifier|MemberExpression right:expr
-    if (expr.type == "AssignmentExpression") {
-        const { left, operator, right } = st.expression
+    // if (expr.type == "AssignmentExpression") {
+    //     const { left, operator, right } = st.expression
 
-        // Identifier name:string
-        if (left.type == "Identifier") {
-            expr.category = "expression.write.var"
-            component = <WriteVar name={left.name} setBy={operator} setTo={right} />
-        }
+    //     // Identifier name:string
+    //     if (left.type == "Identifier") {
+    //         expr.category = "expression.write.var"
+    //         component = <WriteVar name={left.name} setBy={operator} setTo={right} />
+    //     }
 
-        // MemberExpression object:expr property:expr computed:bool
-        if (left.type == "MemberExpression") {
-            const { object, property, computed } = left
-            if (computed) {
-                expr.category = "expression.write.expr"
-                component = <WriteIndex expr={property} of={object} setBy={operator} setTo={right} parens={parens} parent={expr} />
-            } else {
-                expr.category = "expression.write.prop"
-                component = <WriteProp name={property.name} of={object} setBy={operator} setTo={right} parens={parens} parent={expr} />
-            }
-        }
-    }
+    //     // MemberExpression object:expr property:expr computed:bool
+    //     if (left.type == "MemberExpression") {
+    //         const { object, property, computed } = left
+    //         if (computed) {
+    //             expr.category = "expression.write.expr"
+    //             component = <WriteIndex expr={property} of={object} setBy={operator} setTo={right} parens={parens} parent={expr} />
+    //         } else {
+    //             expr.category = "expression.write.prop"
+    //             component = <WriteProp name={property.name} of={object} setBy={operator} setTo={right} parens={parens} parent={expr} />
+    //         }
+    //     }
+    // }
 
     // UnaryExpression operator:string argument:expr
     // XXXXExpression operator:string left:expr right:exp
@@ -343,7 +343,7 @@ const NewFnArrow = ({ async, args, code, parent, parens }) => {
     }
     return <>
         {async && <span className="keyword keyword-prefix keyword-async">async</span>}
-        {name && <span className="ast-exp-fn-name">{name}</span>}
+        {/* {name && <span className="ast-exp-fn-name">{name}</span>} */}
         <FnArgsDef args={args} parens={parens} parent={parent} />
         <span className="punc punc-arrow">&nbsp;=&gt;&nbsp;</span>
         {content}
