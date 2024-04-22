@@ -14,7 +14,7 @@ function MainPage() {
                         <div className="w-[33.33%]  bg-gray-300 overflow-auto" style={{ scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
                                 <ul className="list-disc">
-                                    <li>Statements
+                                    <li>Statements kinds
                                         <ul className="list-disc ml-4">
                                             <li>Expression
                                                 <ul className="list-disc ml-4">
@@ -71,7 +71,7 @@ function MainPage() {
                             <div className='p-5'>
                                 <ul className="list-disc">
                                     <li>
-                                        Expressions
+                                        Expressions kinds
                                         <ul className="list-disc ml-4">
                                             {/* Operation, Read variable and Function call */}
                                             <li>Operation
