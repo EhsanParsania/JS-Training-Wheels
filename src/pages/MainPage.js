@@ -7,8 +7,8 @@ function MainPage() {
         <div className="h-screen">
             <div className={`grid grid-cols-5 h-screen w-full`}>
                 <div className="col-span-3 bg-gray-200">
-                    <div className="h-[70%]">
-                        Top part
+                    <div className="h-[70%] overflow-auto" style={{ scrollbarWidth: 'thin' }}>
+                        <LivePortal />
                     </div>
 
                     <div className="h-[30%] bg-gray-400 flex">
@@ -114,14 +114,10 @@ function MainPage() {
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
                 <div className="col-span-2 bg-gray-300">
 
                     <div className="h-[60%]  bg-gray-300  overflow-auto" style={{ scrollbarWidth: 'thin' }} >
-                        <LivePortal />
                     </div>
                     <div className="h-[40%]  bg-gray-600">Right bottom part</div>
                 </div>
