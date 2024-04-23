@@ -6,7 +6,7 @@ function MainPage() {
     return (
         <div className="h-screen">
             <div className={`grid grid-cols-5 h-screen w-full`}>
-                <div className="col-span-3 bg-gray-200">
+                <div className="col-span-3 h-screen bg-gray-200">
                     <div className="h-[70%] overflow-auto" style={{ scrollbarWidth: 'thin' }}>
                         <LivePortal />
                     </div>
@@ -115,7 +115,7 @@ function MainPage() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-2 bg-gray-300">
+                <div className="col-span-2 h-screen bg-gray-300">
 
                     <div className="h-[60%]  bg-gray-300  overflow-auto" style={{ scrollbarWidth: 'thin' }} >
                     </div>
