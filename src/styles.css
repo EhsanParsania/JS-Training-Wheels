@@ -1,5 +1,10 @@
-h1 {font-size: 3em;}
-h2 {font-size: 2em;}
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
 
 .ast {
   background-color: #f5f5f5;
@@ -17,34 +22,53 @@ h2 {font-size: 2em;}
   margin-left: 5px;
   margin-right: 5px;
 }
-.punc-comma { margin-left: 0px; }
-.punc-open, .punc-close {
+
+.punc-comma {
+  margin-left: 0px;
+}
+
+.punc-open,
+.punc-close {
   margin-left: 0px;
   margin-right: 0px;
 }
+
 .punc-member-name,
-.punc-member-exp { transform: translateY(-2px); }
+.punc-member-exp {
+  transform: translateY(-2px);
+}
 
 .ast-st {
   background-color: rgba(0, 0, 0, 0.07);
   padding: 10px 10px;
 }
+
 .ast-st * {
   display: inline-block;
   vertical-align: middle;
 }
+
 .ast-st:first-child {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
 .ast-st:last-child {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-.ast-st:not(:last-child) { margin-bottom: 5px; }
-.ast-st:hover { background-color: rgba(0, 0, 0, 0.1); }
 
-.ast-st-unk { background-color: orange; }
+.ast-st:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.ast-st:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.ast-st-unk {
+  background-color: orange;
+}
 
 .ast-st-exp {
   /* background-color: rgba(0, 238, 255, 0.34); */
@@ -56,10 +80,12 @@ h2 {font-size: 2em;}
   padding-left: 7.5px;
   padding-right: 7.5px;
 }
+
 .ast-exp:has(.ast-exp) {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 .ast-exp:not(:has(.ast-exp:hover)):hover {
   border: 1px solid rgba(0 0 0 / 50%);
 }
@@ -73,72 +99,139 @@ h2 {font-size: 2em;}
 }
 
 .ast-exp-data-bool {}
+
 .ast-exp-data-num {}
-.ast-exp-data-str { color: gray; }
+
+.ast-exp-data-str {
+  color: gray;
+}
 
 .ast-exp-data-nul {}
+
 .ast-exp-data-undef {}
 
 .ast-exp-data-arr {}
+
 .ast-exp-data-obj {}
 
 .ast-exp-data-fn {}
+
 .ast-exp-data-fna {}
 
 .ast-exp-op {}
+
 .ast-exp-op1 {}
+
 .ast-exp-op2 {}
+
 .ast-exp-op3 {}
 
-.ast-noundef { border-color: red !important;}
+.ast-noundef {
+  border-color: red !important;
+}
+
 .ast-exp-read {}
-.ast-exp-read-var { color: red; }
+
+.ast-exp-read-var {
+  color: red;
+}
+
 .ast-exp-read-prop {}
-.ast-exp-read-prop-name { color: gray; }
+
+.ast-exp-read-prop-name {
+  color: gray;
+}
+
 .ast-exp-read-expr {}
 
 /* // WRITE */
 
 .ast-exp-call {}
 
-.punc-exp-group {} /* ( ) .punc-open .punc-close */
+.punc-exp-group {}
 
-.punc-member-name {} /* . */
-.punc-member-exp {} /* [ ] .punc-open .punc-close */
+/* ( ) .punc-open .punc-close */
+
+.punc-member-name {}
+
+/* . */
+.punc-member-exp {}
+
+/* [ ] .punc-open .punc-close */
 
 .punc-ass {}
 
 .punc-op {}
-.punc-unary {} /* .punc-op */
-.punc-binary {} /* .punc-op */
-.punc-ternary {} /* .punc-op */
 
-.punc-call {} /* ( ) .punc-open .punc-close */
-.punc-call-arg-sep {} /* , .punc-comma */
+.punc-unary {}
 
-.punc-arrow {} /* => .punc-comma */
+/* .punc-op */
+.punc-binary {}
+
+/* .punc-op */
+.punc-ternary {}
+
+/* .punc-op */
+
+.punc-call {}
+
+/* ( ) .punc-open .punc-close */
+.punc-call-arg-sep {}
+
+/* , .punc-comma */
+
+.punc-arrow {}
+
+/* => .punc-comma */
 .punc-block {}
+
 .punc-block-start {}
+
 .punc-block-end {}
 
-.punc-new-obj {} /* { } .punc-open .punc-close */
-.punc-new-obj-prop-exp {} /* [ ] .punc-open .punc-close */
-.punc-new-obj-keyval-sep {} /* : */
-.punc-new-obj-prop-sep {} /* , .punc-comma */
+.punc-new-obj {}
 
-.punc-new-arr {} /* [ ] .punc-open .punc-close */
-.punc-new-arr-item-sep {} /* , .punc-comma */
+/* { } .punc-open .punc-close */
+.punc-new-obj-prop-exp {}
 
-.punc-new-fn-arg {} /* ( ) .punc-open .punc-close */
-.punc-new-fn-arg-sep {} /* , .punc-comma */
-.punc-new-fn-block {} /* { } .punc-block .punc-open .punc-close */
+/* [ ] .punc-open .punc-close */
+.punc-new-obj-keyval-sep {}
+
+/* : */
+.punc-new-obj-prop-sep {}
+
+/* , .punc-comma */
+
+.punc-new-arr {}
+
+/* [ ] .punc-open .punc-close */
+.punc-new-arr-item-sep {}
+
+/* , .punc-comma */
+
+.punc-new-fn-arg {}
+
+/* ( ) .punc-open .punc-close */
+.punc-new-fn-arg-sep {}
+
+/* , .punc-comma */
+.punc-new-fn-block {}
+
+/* { } .punc-block .punc-open .punc-close */
 
 
-.keyword { color: purple; }
-.keyword-prefix { margin-right: 5px; }
+.keyword {
+  color: purple;
+}
+
+.keyword-prefix {
+  margin-right: 5px;
+}
 
 .keyword-async {}
+
 .keyword-def {}
+
 .keyword-fn {}
 
 :root {
@@ -151,81 +244,96 @@ h2 {font-size: 2em;}
   --delay-child3: -0.1s;
   --highlight-kinds-color: #7b7b7b;
   --delay-child1-standOut: calc(var(--delay-all) + var(--delay-child1));
-  --delay-child1-goBack: calc(
-    var(--delay-child1-standOut) + var(--duration-standOut) +
-      var(--duration-wait)
-  );
-  --delay-child2-standOut: calc(
-    var(--delay-child1-goBack) + var(--duration-goBack) + var(--delay-child2)
-  );
-  --delay-child2-goBack: calc(
-    var(--delay-child2-standOut) + var(--duration-standOut) +
-      var(--duration-wait)
-  );
-  --delay-child3-standOut: calc(
-    var(--delay-child2-goBack) + var(--duration-goBack) + var(--delay-child3)
-  );
-  --delay-child3-goBack: calc(
-    var(--delay-child3-standOut) + var(--duration-standOut) +
-      var(--duration-wait)
-  );
+  --delay-child1-goBack: calc(var(--delay-child1-standOut) + var(--duration-standOut) + var(--duration-wait));
+  --delay-child2-standOut: calc(var(--delay-child1-goBack) + var(--duration-goBack) + var(--delay-child2));
+  --delay-child2-goBack: calc(var(--delay-child2-standOut) + var(--duration-standOut) + var(--duration-wait));
+  --delay-child3-standOut: calc(var(--delay-child2-goBack) + var(--duration-goBack) + var(--delay-child3));
+  --delay-child3-goBack: calc(var(--delay-child3-standOut) + var(--duration-standOut) + var(--duration-wait));
 }
 
-.ast-exp-op:hover:not(:has(.ast-exp-op:hover)) > .ast-exp-content > * {
+.ast-exp-op:hover:not(:has(.ast-exp-op:hover))>.ast-exp-content>* {
   animation: standOut var(--duration-standOut) ease-out forwards,
     goBack var(--duration-goBack) ease-out forwards;
 }
-.ast-exp-op > .ast-exp-content > :nth-child(1) {
+
+.ast-exp-op>.ast-exp-content> :nth-child(1) {
   animation-delay: var(--delay-child1-standOut), var(--delay-child1-goBack) !important;
 }
-.ast-exp-op > .ast-exp-content > :nth-child(2) {
+
+.ast-exp-op>.ast-exp-content> :nth-child(2) {
   animation-delay: var(--delay-child2-standOut), var(--delay-child2-goBack) !important;
 }
-.ast-exp-op2 > .ast-exp-content > :nth-child(3) {
-  animation-delay: var(--delay-child3-standOut), var(--delay-child3-goBack) !important;
-}
-.ast-exp-op3 > .ast-exp-content > :nth-child(3),
-.ast-exp-op3 > .ast-exp-content > :nth-child(4),
-.ast-exp-op3 > .ast-exp-content > :nth-child(5) {
+
+.ast-exp-op2>.ast-exp-content> :nth-child(3) {
   animation-delay: var(--delay-child3-standOut), var(--delay-child3-goBack) !important;
 }
 
-@keyframes standOut { 100% { transform: translateY(-6px) scale(1.2); } }
-@keyframes goBack { 100% { transform: translateY(0px) scale(1); } }
+.ast-exp-op3>.ast-exp-content> :nth-child(3),
+.ast-exp-op3>.ast-exp-content> :nth-child(4),
+.ast-exp-op3>.ast-exp-content> :nth-child(5) {
+  animation-delay: var(--delay-child3-standOut), var(--delay-child3-goBack) !important;
+}
+
+@keyframes standOut {
+  100% {
+    transform: translateY(-6px) scale(1.2);
+  }
+}
+
+@keyframes goBack {
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
 
 
+
+/* CHEAT SHEET CLASSES */
+/* EXPRESSION KINDS */
 .parent:has(.punc-unary:hover) .kinds-exp,
-.parent:has(.punc-unary:hover) .kinds-exp-unary{
-    background-color: var(--highlight-kinds-color)
+.parent:has(.punc-unary:hover) .kinds-exp-op,
+.parent:has(.punc-unary:hover) .kinds-exp-unary {
+  background-color: var(--highlight-kinds-color)
 }
+
 .parent:has(.punc-binary:hover) .kinds-exp,
-.parent:has(.punc-binary:hover) .kinds-exp-binary
-{
-    background-color: var(--highlight-kinds-color)
+.parent:has(.punc-binary:hover) .kinds-exp-op,
+.parent:has(.punc-binary:hover) .kinds-exp-binary {
+  background-color: var(--highlight-kinds-color)
 }
+
 .parent:has(.punc-ternary:hover) .kinds-exp,
-.parent:has(.punc-ternary:hover) .kinds-exp-ternary{
-    background-color: var(--highlight-kinds-color)
+.parent:has(.punc-ternary:hover) .kinds-exp-op,
+.parent:has(.punc-ternary:hover) .kinds-exp-ternary {
+  background-color: var(--highlight-kinds-color)
 }
 
 .parent:has(.ast-exp-read-var-name:hover) .kinds-exp,
-.parent:has(.ast-exp-read-var-name:hover) .kinds-exp-read-var-name{
-    background-color: var(--highlight-kinds-color)
+.parent:has(.ast-exp-read-var-name:hover) .kinds-exp-read,
+.parent:has(.ast-exp-read-var-name:hover) .kinds-exp-read-var-name {
+  background-color: var(--highlight-kinds-color)
 }
 
 .parent:has(.punc-member-exp:hover) .kinds-exp,
-.parent:has(.punc-member-exp:hover) .kinds-exp-read-prop-dynamic-name{
-    background-color: var(--highlight-kinds-color)
+.parent:has(.punc-member-exp:hover) .kinds-exp-read,
+.parent:has(.punc-member-exp:hover) .kinds-exp-read-prop,
+.parent:has(.punc-member-exp:hover) .kinds-exp-read-prop-dynamic-name {
+  background-color: var(--highlight-kinds-color)
 }
 
 .parent:has(.punc-member-name:hover) .kinds-exp,
+.parent:has(.punc-member-name:hover) .kinds-exp-read,
+.parent:has(.punc-member-name:hover) .kinds-exp-read-prop,
 .parent:has(.punc-member-name:hover) .kinds-exp-read-prop-static-name,
-.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp-read-prop-static-name{
-    background-color: var(--highlight-kinds-color)
+.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp,
+.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp-read,
+.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp-read-prop,
+.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp-read-prop-static-name {
+  background-color: var(--highlight-kinds-color)
 }
 
 .parent:has(.punc-call:hover) .kinds-exp,
-.parent:has(.punc-call:hover) .kinds-exp-func-call{
-    background-color: var(--highlight-kinds-color)
+.parent:has(.punc-call:hover) .kinds-exp-func-call {
+  background-color: var(--highlight-kinds-color)
 }
 
