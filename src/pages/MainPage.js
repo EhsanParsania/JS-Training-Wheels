@@ -1,11 +1,13 @@
 import React from 'react';
 import { LivePortal } from '../components/LivePortal';
+import { Unary, Binary, Ternary, FromVariable, FromPropByStaticName, FromPropByDynamicName, FunctionCall } from '../components/expressions';
+import { Number } from '../components/data';
 
 function MainPage() {
 
     return (
         <div className="h-screen">
-            <div className={`grid grid-cols-5 h-screen w-full`}>
+            <div className={`grid grid-cols-5 h-screen w-full parent`}>
                 <div className="col-span-3 h-screen bg-gray-200">
                     <div className="h-[70%] overflow-auto" style={{ scrollbarWidth: 'thin' }}>
                         <LivePortal />
@@ -71,28 +73,30 @@ function MainPage() {
                         </div>
                         <div className="w-[33.33%]  bg-gray-300 overflow-auto" style={{ scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
-                                <p className='font-bold'>
+                                <p className='font-bold kinds-exp'>
                                     Expressions kinds
                                 </p>
                                 <ul className="list-disc ml-4">
                                     {/* Operation, Read variable and Function call */}
-                                    <li>Operation
+                                    <li><span className='kinds-exp-op'>Operation</span>
                                         <ul className="list-disc ml-4">
-                                            <li>Unary</li>
-                                            <li>Binary</li>
-                                            <li>Ternary</li>
+                                            <li><Unary /></li>
+                                            <li><Binary /></li>
+                                            <li><Ternary /></li>
                                         </ul>
                                     </li>
-                                    <li>Read variable</li>
+                                    <li><span className='kinds-exp-read'>Read variable</span> </li>
                                     <ul className="list-disc ml-4">
-                                        <li>From variable ( of scope )</li>
-                                        <li>From property</li>
+                                        <li> <FromVariable /> </li>
+                                        <li>
+                                            <span className='kinds-exp-read-prop'>From property</span>
+                                        </li>
                                         <ul className="list-disc ml-4">
-                                            <li>By static name</li>
-                                            <li>By dynamic name ( expression ) / array index</li>
+                                            <li> <FromPropByStaticName /> </li>
+                                            <li> <FromPropByDynamicName /> </li>
                                         </ul>
                                     </ul>
-                                    <li>Function call</li>
+                                    <li> <FunctionCall/> </li>
                                 </ul>
                             </div>
                         </div>
@@ -102,7 +106,7 @@ function MainPage() {
                                     Data kinds
                                 </p>
                                 <ul className="list-disc ml-4">
-                                    <li>Number</li>
+                                    <li><Number /></li>
                                     <li>Boolean</li>
                                     <li>String</li>
                                     <li>Null</li>
