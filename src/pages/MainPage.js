@@ -1,7 +1,7 @@
 import React from 'react';
 import { LivePortal } from '../components/LivePortal';
 import { Unary, Binary, Ternary, FromVariable, FromPropByStaticName, FromPropByDynamicName, FunctionCall } from '../components/expressions';
-import { Number } from '../components/data';
+import { Number, Boolean, String, Null, Undefined, Object, Array, Function, ArrowFunction } from '../components/data';
 
 function MainPage() {
 
@@ -96,24 +96,25 @@ function MainPage() {
                                             <li> <FromPropByDynamicName /> </li>
                                         </ul>
                                     </ul>
-                                    <li> <FunctionCall/> </li>
+                                    <li> <FunctionCall /> </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="w-[33.33%]  bg-gray-300 overflow-auto" style={{ scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
-                                <p className='font-bold'>
+                                <p className='font-bold kinds-data'>
                                     Data kinds
                                 </p>
                                 <ul className="list-disc ml-4">
                                     <li><Number /></li>
-                                    <li>Boolean</li>
-                                    <li>String</li>
-                                    <li>Null</li>
-                                    <li>Undefined</li>
-                                    <li>Array</li>
-                                    <li>Object</li>
-                                    <li>Function</li>
+                                    <li><Boolean /></li>
+                                    <li><String /></li>
+                                    <li><Null /></li>
+                                    <li><Undefined /></li>
+                                    <li><Object /></li>
+                                    <li><Array /></li>
+                                    <li><Function /></li>
+                                    <li><ArrowFunction /></li>
                                 </ul>
                             </div>
                         </div>
