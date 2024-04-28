@@ -1,0 +1,9 @@
+export { Number } from './Number';
+export { Boolean } from './Boolean';
+export { String } from './String';
+export { Null } from './Null';
+export { Undefined } from './Undefined';
+export { Object } from './Object';
+export { Array } from './Array';
+export { Function } from './Function';
+export { ArrowFunction } from './ArrowFunction';
