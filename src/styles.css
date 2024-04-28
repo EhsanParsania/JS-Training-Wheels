@@ -149,6 +149,7 @@ h2 {font-size: 2em;}
   --delay-child1: 0s;
   --delay-child2: -0.1s;
   --delay-child3: -0.1s;
+  --highlight-kinds-color: #7b7b7b;
   --delay-child1-standOut: calc(var(--delay-all) + var(--delay-child1));
   --delay-child1-goBack: calc(
     var(--delay-child1-standOut) + var(--duration-standOut) +
@@ -191,4 +192,40 @@ h2 {font-size: 2em;}
 
 @keyframes standOut { 100% { transform: translateY(-6px) scale(1.2); } }
 @keyframes goBack { 100% { transform: translateY(0px) scale(1); } }
+
+
+.parent:has(.punc-unary:hover) .kinds-exp,
+.parent:has(.punc-unary:hover) .kinds-exp-unary{
+    background-color: var(--highlight-kinds-color)
+}
+.parent:has(.punc-binary:hover) .kinds-exp,
+.parent:has(.punc-binary:hover) .kinds-exp-binary
+{
+    background-color: var(--highlight-kinds-color)
+}
+.parent:has(.punc-ternary:hover) .kinds-exp,
+.parent:has(.punc-ternary:hover) .kinds-exp-ternary{
+    background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-read-var-name:hover) .kinds-exp,
+.parent:has(.ast-exp-read-var-name:hover) .kinds-exp-read-var-name{
+    background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.punc-member-exp:hover) .kinds-exp,
+.parent:has(.punc-member-exp:hover) .kinds-exp-read-prop-dynamic-name{
+    background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.punc-member-name:hover) .kinds-exp,
+.parent:has(.punc-member-name:hover) .kinds-exp-read-prop-static-name,
+.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp-read-prop-static-name{
+    background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.punc-call:hover) .kinds-exp,
+.parent:has(.punc-call:hover) .kinds-exp-func-call{
+    background-color: var(--highlight-kinds-color)
+}
 
