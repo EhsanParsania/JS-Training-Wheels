@@ -321,15 +321,14 @@ h2 {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.punc-member-name:hover) .kinds-exp,
-.parent:has(.punc-member-name:hover) .kinds-exp-read,
-.parent:has(.punc-member-name:hover) .kinds-exp-read-prop,
-.parent:has(.punc-member-name:hover) .kinds-exp-read-prop-static-name,
-.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp,
-.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp-read,
-.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp-read-prop,
-.parent:has(.ast-exp-read-prop-name:hover) .kinds-exp-read-prop-static-name {
-  background-color: var(--highlight-kinds-color)
+.parent:has(.punc-member-name:hover),
+.parent:has(.ast-exp-read-prop-name:hover) {
+  .kinds-exp,
+  .kinds-exp-read,
+  .kinds-exp-read-prop,
+  .kinds-exp-read-prop-static-name {
+    background-color: var(--highlight-kinds-color);
+  }
 }
 
 .parent:has(.punc-call:hover) .kinds-exp,
