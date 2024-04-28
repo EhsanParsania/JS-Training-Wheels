@@ -336,3 +336,50 @@ h2 {
   background-color: var(--highlight-kinds-color)
 }
 
+/* DATA KINDS*/
+
+.parent:has(.ast-exp-data-num:hover) .kinds-data,
+.parent:has(.ast-exp-data-num:hover) .kinds-data-number {
+  background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-data-str:hover) .kinds-data,
+.parent:has(.ast-exp-data-str:hover) .kinds-data-string {
+  background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-data-bool:hover) .kinds-data,
+.parent:has(.ast-exp-data-bool:hover) .kinds-data-boolean {
+  background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-data-nul:hover) .kinds-data,
+.parent:has(.ast-exp-data-nul:hover) .kinds-data-null {
+  background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-data-undef:hover) .kinds-data,
+.parent:has(.ast-exp-data-undef:hover) .kinds-data-undefined {
+  background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-data-arr:hover) .kinds-data,
+.parent:has(.ast-exp-data-arr:hover) .kinds-data-array {
+  background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-data-obj:hover) .kinds-data,
+.parent:has(.ast-exp-data-obj:hover) .kinds-data-object {
+  background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-data-fn:hover) .kinds-data,
+.parent:has(.ast-exp-data-fn:hover) .kinds-data-function {
+  background-color: var(--highlight-kinds-color)
+}
+
+.parent:has(.ast-exp-data-fna:hover) .kinds-data,
+.parent:has(.ast-exp-data-fna:hover) .kinds-data-function-arrow {
+  background-color: var(--highlight-kinds-color)
+}
+
