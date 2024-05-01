@@ -1,11 +1,14 @@
-import './App.css';
-import "./styles.css";
 import { MainPage } from './pages/MainPage';
 
-function App() {
+import React from "react";
+import "./styles.css";
+import "./styles/tailwind-pre-build.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+export default function App() {
   return (
-   <MainPage />
+    <Router>
+       <MainPage />
+    </Router>
   );
 }
-
-export default App;
