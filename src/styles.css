@@ -132,15 +132,11 @@ h2 {
 
 .ast-exp-read {}
 
-.ast-exp-read-var {
-  color: red;
-}
+.ast-exp-read-var {}
 
 .ast-exp-read-prop {}
 
-.ast-exp-read-prop-name {
-  color: gray;
-}
+.ast-exp-read-prop-name {}
 
 .ast-exp-read-expr {}
 
@@ -288,41 +284,46 @@ h2 {
 
 
 
-/* CHEAT SHEET CLASSES */
+/*============================= CHEAT SHEET CLASSES =============================*/
+/* STATEMENT KINDS */
+
+
 /* EXPRESSION KINDS */
-.parent:has(.punc-unary:hover) .kinds-exp,
-.parent:has(.punc-unary:hover) .kinds-exp-op,
-.parent:has(.punc-unary:hover) .kinds-exp-unary {
+.left-side:has(.punc-unary:hover) .kinds-exp,
+.left-side:has(.punc-unary:hover) .kinds-exp-op,
+.left-side:has(.punc-unary:hover) .kinds-exp-unary {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.punc-binary:hover) .kinds-exp,
-.parent:has(.punc-binary:hover) .kinds-exp-op,
-.parent:has(.punc-binary:hover) .kinds-exp-binary {
+.left-side:has(.punc-binary:hover) .kinds-exp,
+.left-side:has(.punc-binary:hover) .kinds-exp-op,
+.left-side:has(.punc-binary:hover) .kinds-exp-binary {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.punc-ternary:hover) .kinds-exp,
-.parent:has(.punc-ternary:hover) .kinds-exp-op,
-.parent:has(.punc-ternary:hover) .kinds-exp-ternary {
+.left-side:has(.punc-ternary:hover) .kinds-exp,
+.left-side:has(.punc-ternary:hover) .kinds-exp-op,
+.left-side:has(.punc-ternary:hover) .kinds-exp-ternary {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-read-var-name:hover) .kinds-exp,
-.parent:has(.ast-exp-read-var-name:hover) .kinds-exp-read,
-.parent:has(.ast-exp-read-var-name:hover) .kinds-exp-read-var-name {
+.left-side:has(.ast-exp-read-var:hover) .kinds-exp,
+.left-side:has(.ast-exp-read-var:hover) .kinds-exp-read,
+.left-side:has(.ast-exp-read-var:hover) .kinds-exp-read-var,
+.left-side:has(.ast-exp-read-var:hover) .kinds-exp-read-var-name {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.punc-member-exp:hover) .kinds-exp,
-.parent:has(.punc-member-exp:hover) .kinds-exp-read,
-.parent:has(.punc-member-exp:hover) .kinds-exp-read-prop,
-.parent:has(.punc-member-exp:hover) .kinds-exp-read-prop-dynamic-name {
+.left-side:has(.punc-member-exp:hover) .kinds-exp,
+.left-side:has(.punc-member-exp:hover) .kinds-exp-read,
+.left-side:has(.punc-member-exp:hover) .kinds-exp-read-prop,
+.left-side:has(.punc-member-exp:hover) .kinds-exp-read-prop-dynamic-name {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.punc-member-name:hover),
-.parent:has(.ast-exp-read-prop-name:hover) {
+.left-side:has(.punc-member-name:hover),
+.left-side:has(.ast-exp-read-prop-name:hover) {
+
   .kinds-exp,
   .kinds-exp-read,
   .kinds-exp-read-prop,
@@ -331,55 +332,54 @@ h2 {
   }
 }
 
-.parent:has(.punc-call:hover) .kinds-exp,
-.parent:has(.punc-call:hover) .kinds-exp-func-call {
+.left-side:has(.punc-call:hover) .kinds-exp,
+.left-side:has(.punc-call:hover) .kinds-exp-func-call {
   background-color: var(--highlight-kinds-color)
 }
 
 /* DATA KINDS*/
 
-.parent:has(.ast-exp-data-num:hover) .kinds-data,
-.parent:has(.ast-exp-data-num:hover) .kinds-data-number {
+.left-side:has(.ast-exp-data-num:hover) .kinds-data,
+.left-side:has(.ast-exp-data-num:hover) .kinds-data-number {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-data-str:hover) .kinds-data,
-.parent:has(.ast-exp-data-str:hover) .kinds-data-string {
+.left-side:has(.ast-exp-data-str:hover) .kinds-data,
+.left-side:has(.ast-exp-data-str:hover) .kinds-data-string {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-data-bool:hover) .kinds-data,
-.parent:has(.ast-exp-data-bool:hover) .kinds-data-boolean {
+.left-side:has(.ast-exp-data-bool:hover) .kinds-data,
+.left-side:has(.ast-exp-data-bool:hover) .kinds-data-boolean {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-data-nul:hover) .kinds-data,
-.parent:has(.ast-exp-data-nul:hover) .kinds-data-null {
+.left-side:has(.ast-exp-data-nul:hover) .kinds-data,
+.left-side:has(.ast-exp-data-nul:hover) .kinds-data-null {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-data-undef:hover) .kinds-data,
-.parent:has(.ast-exp-data-undef:hover) .kinds-data-undefined {
+.left-side:has(.ast-exp-data-undef:hover) .kinds-data,
+.left-side:has(.ast-exp-data-undef:hover) .kinds-data-undefined {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-data-arr:hover) .kinds-data,
-.parent:has(.ast-exp-data-arr:hover) .kinds-data-array {
+.left-side:has(.ast-exp-data-arr:hover) .kinds-data,
+.left-side:has(.ast-exp-data-arr:hover) .kinds-data-array {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-data-obj:hover) .kinds-data,
-.parent:has(.ast-exp-data-obj:hover) .kinds-data-object {
+.left-side:has(.ast-exp-data-obj:hover) .kinds-data,
+.left-side:has(.ast-exp-data-obj:hover) .kinds-data-object {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-data-fn:hover) .kinds-data,
-.parent:has(.ast-exp-data-fn:hover) .kinds-data-function {
+.left-side:has(.ast-exp-data-fn:hover) .kinds-data,
+.left-side:has(.ast-exp-data-fn:hover) .kinds-data-function {
   background-color: var(--highlight-kinds-color)
 }
 
-.parent:has(.ast-exp-data-fna:hover) .kinds-data,
-.parent:has(.ast-exp-data-fna:hover) .kinds-data-function-arrow {
-  background-color: var(--highlight-kinds-color)
-}
-
+/* .left-side:has(.ast-exp-data-fna:hover) .kinds-data,
+.left-side:has(.ast-exp-data-fna:hover):not(:hover .me) .kinds-data-function-arrow {
+  background-color: var(--highlight-kinds-color);
+} */
