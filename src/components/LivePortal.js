@@ -28,25 +28,27 @@ const parensSetOf = tokens => {
 }
 
 const colorPalletes = [
-    // canva
-    { hotPint: "#FFAEBC", tiffanyBlue: "#A0E7E5", mint: "#B4F8C8", yellow: "#FBE7C6" },
-    // Highlight Color Text
-    { red: '#ff0000', yellow: '#f8ff00', brown: '#a41a1a', green: '#10ff00', cyan: '#00ffd9' },
-    // Highlighter Colors
-    { yellow: '#fdff00', orange: '#ff9a00', green: '#00ff04', blue: '#00c5ff', magenta: '#ff00a7' },
-    // Highlight mild
-    { red: '#fdb9c9', orange: '#ffdcbe', yellow: '#f6f3b5', cyan: '#bbf6f3', blue: '#a7e0f4' },
-    // highlighter pastel
-    { red: '#ff9fae', yelow: '#fde995', green: '#a6e1c5', blue: '#a7e0f6', purple: '#e1a7fb' },
-    // highlighters
-    { lime: '#e3ff00', green: '#56ff00', cyan: '#00f9ff', magenta: '#ff00db', purple: '#bd00ff' },
-    // Highlighter Fun
-    { yellow: '#f0ff00', green: '#22ff00', magenta: '#ff00db', cyan: '#04dfff', purple: '#b000ff' },
-    // Highlighter x Co
-    { magenta: '#ff659f', cyan: '#67dfff', green: '#83f18d', purple: '#b581fe', yellow: '#fcf151' },
-    // Highlight
-    { cyan: '#52e2ee', yellow: '#ecfd63', gold: '#f2e030', black: '#333333', gray: '#dbdbdb' },
+    // canva  [hotPint, tiffanyBlue, mint, yellow]
+    ["#FFAEBC", "#A0E7E5", "#B4F8C8", "#FBE7C6"],
+    // Highlight Color Text [red, yellow, brown, green, cyan]
+    ['#ff00aa', '#f8ff00', '#a41a1a', '#10ff00', '#00ffd9'],
+    // Highlighter Colors [yellow, orange, green, blue, magenta]
+    ['#fdff00', '#ff9a00', '#00ff04', '#00c5ff', '#ff00a7'],
+    // Highlight mild [red, orange, yellow, cyan, blue]
+    ['#fdb9c9', '#ffdcbe', '#f6f3b5', '#bbf6f3', '#a7e0f4'],
+    // highlighter pastel [red, yelow, green, blue, purple]
+    ['#ff9fae', '#fde995', '#a6e1c5', '#a7e0f6', '#e1a7fb'],
+    // highlighters [lime, green, cyan, magenta, purple]
+    ['#e3ff00', '#56ff00', '#00f9ff', '#ff00db', '#bd00ff'],
+    // Highlighter Fun [yellow, green, magenta, cyan, purple]
+    ['#f0ff00', '#22ff00', '#ff00db', '#04dfff', '#b000ff'],
+    // Highlighter x Co [magenta, cyan, green, purple, yellow]
+    ['#ff659f', '#67dfff', '#83f18d', '#b581fe', '#fcf151'],
+    // Highlight [cyan, yellow, gold, black, gray]
+    ['#52e2ee', '#ecfd63', '#f2e030', '#333333', '#dbdbdb'],
 ]
+
+const colorPallete = colorPalletes[2]
 
 const decorations = {
     statement: {
@@ -71,9 +73,9 @@ const decorations = {
         },
         read: {
             classN: "ast-exp-read",
-            var: { tooltip: "Read variable", classN: "ast-exp-read-var" },
-            prop: { tooltip: "Read property of object", classN: "ast-exp-read-prop" },
-            expr: { tooltip: "Read property of object (by expression)", classN: "ast-exp-read-expr" },
+            var: { tooltip: "Read variable", classN: "ast-exp-read-var", color: colorPallete[4] },
+            prop: { tooltip: "Read property of object", classN: "ast-exp-read-prop", color: colorPallete[3] },
+            expr: { tooltip: "Read property of object (by expression)", classN: "ast-exp-read-expr", color: colorPallete[1] },
         },
         write: {
             classN: "ast-exp-write",
@@ -293,11 +295,13 @@ const Expression = ({ fromAstOf, expr, parent, parens }) => {
         // console.log('had parens', { newParens: [...parens] })
     }
 
-    const title = _.get(decorations, expr.category || "expression.UNKNOWN").tooltip
+    const decoratorObject = _.get(decorations, expr.category || "expression.UNKNOWN")
+    const title = decoratorObject.tooltip
+    const color = decoratorObject.color
     const className = (expr.category || "statement.UNKNOWN").split('.').map((__, i, all) =>
         _.get(decorations, all.slice(0, i + 1).join('.')).classN || ''
     ).join(' ')
-    return <span className={className} title={title}>
+    return <span className={className} title={title} style={{ color: color }}>
         {expr.parenthized &&
             <span className="punc punc-exp-group punc-open">(</span>
         }
@@ -394,7 +398,7 @@ const ReadProp = ({ name, of, parent, parens }) => (
             <Expression expr={of} parens={parens} parent={parent} />
         </span>
         <span className="punc punc-member-name">.</span>
-        <span className="ast-exp-read-prop-name">{name}</span>
+        <span className="ast-exp-read-prop ast-exp-read-prop-name">{name}</span>
     </>
 );
 const ReadIndex = ({ expr, of, parent, parens }) => (
