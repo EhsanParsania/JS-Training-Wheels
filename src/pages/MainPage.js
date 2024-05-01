@@ -7,14 +7,16 @@ function MainPage() {
 
     return (
         <div className="h-screen">
-            <div className={`grid grid-cols-5 h-screen w-full parent`}>
-                <div className="col-span-3 h-screen bg-gray-200">
-                    <div className="h-[70%] overflow-auto" style={{ scrollbarWidth: 'thin' }}>
+            <div className={`flex flex-row h-screen w-full `}>
+
+                <div className="w-3/5 h-screen bg-gray-200 left-side">
+                    <div className="h-full overflow-auto" style={{ height: '70%', scrollbarWidth: 'thin' }}>
                         <LivePortal />
                     </div>
 
-                    <div className="h-[30%] bg-gray-400 flex">
-                        <div className="w-[33.33%]  bg-gray-300 overflow-auto" style={{ scrollbarWidth: 'thin' }}>
+                    <div className="h-full overflow-auto flex" style={{ height: '30%', scrollbarWidth: 'thin' }}>
+                        <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
+
                             <div className='p-5'>
                                 <p className='font-bold'>
                                     Statements kinds
@@ -71,7 +73,7 @@ function MainPage() {
 
                             </div>
                         </div>
-                        <div className="w-[33.33%]  bg-gray-300 overflow-auto" style={{ scrollbarWidth: 'thin' }}>
+                        <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
                                 <p className='font-bold kinds-exp'>
                                     Expressions kinds
@@ -100,7 +102,7 @@ function MainPage() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="w-[33.33%]  bg-gray-300 overflow-auto" style={{ scrollbarWidth: 'thin' }}>
+                        <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
                                 <p className='font-bold kinds-data'>
                                     Data kinds
@@ -120,15 +122,18 @@ function MainPage() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-2 h-screen bg-gray-300">
 
-                    <div className="h-[60%]  bg-gray-300  overflow-auto" style={{ scrollbarWidth: 'thin' }} >
+                <div className="w-2/5 h-screen bg-gray-200">
+                    <div style={{ height: '60%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
+                        Right top part
                     </div>
-                    <div className="h-[40%]  bg-gray-600">Right bottom part</div>
+                    <div style={{ height: '40%', backgroundColor: '#4b5563' }}>
+                        Right bottom part
+                    </div>
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 }
 
