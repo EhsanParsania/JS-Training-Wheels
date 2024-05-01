@@ -18,55 +18,63 @@ function MainPage() {
                         <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
 
                             <div className='p-5'>
-                                <p className='font-bold'>
+                                <p className='font-bold kinds-st'>
                                     Statements kinds
                                 </p>
 
                                 <ul className="list-disc ml-4">
-                                    <li>Expression
+                                    <li><span className='kinds-st-exp'>Expression</span>
                                         <ul className="list-disc ml-4">
                                             <li>Useless</li>
                                             <li>Useful</li>
                                         </ul>
                                     </li>
-                                    <li>Declaration / assignment
+                                    <li><span className='kinds-st-dec-and-assign'>Declaration / assignment</span>
                                         <ul className="list-disc ml-4">
                                             <li>Assign only</li>
                                             <li>Useful</li>
                                             <li>Declare & assign</li>
                                         </ul>
                                     </li>
-                                    <li>Conditional
+                                    <li> <span className='kinds-st-cond'>Conditional</span>
                                         <ul className="list-disc ml-4">
                                             <li>If</li>
                                             <li>Else</li>
-                                            <li>Loop
+                                        </ul>
+                                        <li> <span className='kinds-st-cond-loop'>
+                                            Loop
+                                        </span>
+                                            <ul className="list-disc ml-4">
+                                                <li>
+                                                    <span className='kinds-st-cond-loop-for'>For</span>
+                                                </li>
                                                 <ul className="list-disc ml-4">
-                                                    <li>For</li>
-                                                    <ul className="list-disc ml-4">
-                                                        <li>3 Statements</li>
-                                                        <li>For/in</li>
-                                                        <li>For/of</li>
-                                                    </ul>
-                                                    <li>While
-                                                        <ul className="list-disc ml-4">
-                                                            <li>Do/while</li>
-                                                            <li>While</li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>Function</li>
-                                                    <ul className="list-disc ml-4">
-                                                        <li>Declaration</li>
-                                                        <li>Return</li>
-                                                        <li>Throw</li>
-                                                    </ul>
-                                                    <li>Try/catch</li>
-                                                    <ul className="list-disc ml-4">
-                                                        <li>Try/Catch</li>
-                                                        <li>Try/Catch/Finally</li>
-                                                    </ul>
+                                                    <li>3 Statements</li>
+                                                    <li>For/in</li>
+                                                    <li>For/of</li>
                                                 </ul>
-                                            </li>
+                                                <li>While
+                                                    <ul className="list-disc ml-4">
+                                                        <li>Do/while</li>
+                                                        <li>While</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <span className='kinds-st-exception'>Function</span>
+                                        </li>
+                                        <ul className="list-disc ml-4">
+                                            <li>Declaration</li>
+                                            <li>Return</li>
+                                            <li>Throw</li>
+                                        </ul>
+                                        <li>
+                                            <span className='kinds-st-exception'>Try/catch</span>
+                                        </li>
+                                        <ul className="list-disc ml-4">
+                                            <li>Try/Catch</li>
+                                            <li>Try/Catch/Finally</li>
                                         </ul>
                                     </li>
                                 </ul>
