@@ -2,7 +2,7 @@ import React from 'react'
 
 function ForOf() {
     return (
-        <span className='kinds-st-loop-for-of'>For Of</span>
+        <span className='cs-st-loop-for-of'>For Of</span>
     )
 }
 

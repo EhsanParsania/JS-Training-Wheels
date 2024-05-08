@@ -2,7 +2,7 @@ import React from 'react'
 
 function FunctionCall() {
     return (
-        <span className='kinds-exp-func-call'>Function call</span>
+        <span className='cs-exp-func-call'>Function call</span>
     )
 }
 

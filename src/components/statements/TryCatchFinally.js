@@ -2,7 +2,7 @@ import React from 'react'
 
 function TryCatchFinally() {
     return (
-        <span className='kinds-st-try-catch-finally'>Try Catch Finally</span>
+        <span className='cs-st-try-catch-finally'>Try Catch Finally</span>
     )
 }
 

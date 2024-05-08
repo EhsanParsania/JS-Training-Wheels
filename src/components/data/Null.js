@@ -2,7 +2,7 @@ import React from 'react'
 
 function Null() {
     return (
-        <span className='kinds-data-null'>Null</span>
+        <span className='cs-data-null'>Null</span>
     )
 }
 

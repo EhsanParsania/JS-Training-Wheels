@@ -2,7 +2,7 @@ import React from 'react'
 
 function Function() {
     return (
-        <span className='kinds-data-function'>Function</span>
+        <span className='cs-data-function'>Function</span>
     )
 }
 

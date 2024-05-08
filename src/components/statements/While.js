@@ -2,7 +2,7 @@ import React from 'react'
 
 function While() {
     return (
-        <span className='kinds-st-cond-loop-while'>While</span>
+        <span className='cs-st-cond-loop-while'>While</span>
     )
 }
 

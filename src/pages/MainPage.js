@@ -18,35 +18,35 @@ function MainPage() {
                         <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
 
                             <div className='p-5'>
-                                <p className='font-bold kinds-st'>
-                                    Statements kinds
+                                <p className='font-bold cs-st'>
+                                    Statements cs
                                 </p>
 
                                 <ul className="list-disc ml-4">
-                                    <li><span className='kinds-st-exp'>Expression</span>
+                                    <li><span className='cs-st-exp'>Expression</span>
                                         <ul className="list-disc ml-4">
                                             <li>Useless</li>
                                             <li>Useful</li>
                                         </ul>
                                     </li>
-                                    <li><span className='kinds-st-dec-and-assign'>Declaration / assignment</span>
+                                    <li><span className='cs-st-dec-and-assign'>Declaration / assignment</span>
                                         <ul className="list-disc ml-4">
                                             <li>Assign only</li>
                                             <li>Useful</li>
                                             <li>Declare & assign</li>
                                         </ul>
                                     </li>
-                                    <li> <span className='kinds-st-cond'>Conditional</span>
+                                    <li> <span className='cs-st-cond'>Conditional</span>
                                         <ul className="list-disc ml-4">
                                             <li>If</li>
                                             <li>Else</li>
                                         </ul>
-                                        <li> <span className='kinds-st-cond-loop'>
+                                        <li> <span className='cs-st-cond-loop'>
                                             Loop
                                         </span>
                                             <ul className="list-disc ml-4">
                                                 <li>
-                                                    <span className='kinds-st-cond-loop-for'>For</span>
+                                                    <span className='cs-st-cond-loop-for'>For</span>
                                                 </li>
                                                 <ul className="list-disc ml-4">
                                                     <li>3 Statements</li>
@@ -62,7 +62,7 @@ function MainPage() {
                                             </ul>
                                         </li>
                                         <li>
-                                            <span className='kinds-st-exception'>Function</span>
+                                            <span className='cs-st-exception'>Function</span>
                                         </li>
                                         <ul className="list-disc ml-4">
                                             <li>Declaration</li>
@@ -70,7 +70,7 @@ function MainPage() {
                                             <li>Throw</li>
                                         </ul>
                                         <li>
-                                            <span className='kinds-st-exception'>Try/catch</span>
+                                            <span className='cs-st-exception'>Try/catch</span>
                                         </li>
                                         <ul className="list-disc ml-4">
                                             <li>Try/Catch</li>
@@ -83,23 +83,23 @@ function MainPage() {
                         </div>
                         <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
-                                <p className='font-bold kinds-exp'>
-                                    Expressions kinds
+                                <p className='font-bold cs-exp'>
+                                    Expressions cs
                                 </p>
                                 <ul className="list-disc ml-4">
                                     {/* Operation, Read variable and Function call */}
-                                    <li><span className='kinds-exp-op'>Operation</span>
+                                    <li><span className='cs-exp-op'>Operation</span>
                                         <ul className="list-disc ml-4">
                                             <li><Unary /></li>
                                             <li><Binary /></li>
                                             <li><Ternary /></li>
                                         </ul>
                                     </li>
-                                    <li><span className='kinds-exp-read'>Read variable</span> </li>
+                                    <li><span className='cs-exp-read'>Read variable</span> </li>
                                     <ul className="list-disc ml-4">
                                         <li> <FromVariable /> </li>
                                         <li>
-                                            <span className='kinds-exp-read-prop'>From property</span>
+                                            <span className='cs-exp-read-prop'>From property</span>
                                         </li>
                                         <ul className="list-disc ml-4">
                                             <li> <FromPropByStaticName /> </li>
@@ -112,8 +112,8 @@ function MainPage() {
                         </div>
                         <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
-                                <p className='font-bold kinds-data'>
-                                    Data kinds
+                                <p className='font-bold cs-data'>
+                                    Data cs
                                 </p>
                                 <ul className="list-disc ml-4">
                                     <li><Number /></li>

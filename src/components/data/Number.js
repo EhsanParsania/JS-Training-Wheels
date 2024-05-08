@@ -2,7 +2,7 @@ import React from 'react'
 
 function Number() {
   return (
-    <span className='kinds-data-number'>Number</span>
+    <span className='cs-data-number'>Number</span>
   )
 }
 

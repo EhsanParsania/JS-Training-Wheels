@@ -2,7 +2,7 @@ import React from 'react'
 
 function ForLoop() {
   return (
-    <span className='kinds-st-loop-for'>For loop</span>
+    <span className='cs-st-loop-for'>For loop</span>
   )
 }
 

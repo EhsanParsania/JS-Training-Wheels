@@ -2,7 +2,7 @@ import React from 'react'
 
 function String() {
     return (
-        <span className='kinds-data-string'>String</span>
+        <span className='cs-data-string'>String</span>
     )
 }
 

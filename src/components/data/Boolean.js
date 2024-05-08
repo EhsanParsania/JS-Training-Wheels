@@ -2,7 +2,7 @@ import React from 'react'
 
 function Boolean() {
     return (
-        <span className='kinds-data-boolean'>Boolean</span>
+        <span className='cs-data-boolean'>Boolean</span>
     )
 }
 

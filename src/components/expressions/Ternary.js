@@ -2,7 +2,7 @@ import React from 'react'
 
 function Ternary() {
     return (
-        <span className='kinds-exp-ternary'>Ternary</span>
+        <span className='cs-exp-ternary'>Ternary</span>
 
     )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 function DoWhile() {
     return (
-        <span className='kinds-st-loop-do-while'>Do While</span>
+        <span className='cs-st-loop-do-while'>Do While</span>
     )
 }
 

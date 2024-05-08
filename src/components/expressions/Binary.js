@@ -2,7 +2,7 @@ import React from 'react'
 
 function Binary() {
     return (
-        <span className='kinds-exp-binary'>Binary</span>
+        <span className='cs-exp-binary'>Binary</span>
     )
 }
 

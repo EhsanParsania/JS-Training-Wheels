@@ -2,7 +2,7 @@ import React from 'react'
 
 function If() {
     return (
-        <span className='kinds-st-if'>If</span>
+        <span className='cs-st-if'>If</span>
     )
 }
 

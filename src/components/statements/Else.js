@@ -2,7 +2,7 @@ import React from 'react'
 
 function Else() {
     return (
-        <span className='kinds-st-else'>Else</span>
+        <span className='cs-st-else'>Else</span>
     )
 }
 

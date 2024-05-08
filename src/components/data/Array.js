@@ -2,7 +2,7 @@ import React from 'react'
 
 function Array() {
     return (
-        <span className='kinds-data-array'>Array</span>
+        <span className='cs-data-array'>Array</span>
     )
 }
 

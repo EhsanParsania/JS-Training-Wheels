@@ -2,7 +2,7 @@ import React from 'react'
 
 function ArrowFunction() {
   return (
-    <span className='kinds-data-function-arrow'>Arrow Function</span>
+    <span className='cs-data-function-arrow'>Arrow Function</span>
   )
 }
 

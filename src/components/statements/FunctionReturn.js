@@ -2,7 +2,7 @@ import React from 'react'
 
 function FunctionReturn() {
     return (
-        <span className='kinds-st-function-return'>Function return</span>
+        <span className='cs-st-function-return'>Function return</span>
     )
 }
 
