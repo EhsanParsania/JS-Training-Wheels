@@ -19,7 +19,7 @@ function MainPage() {
 
                             <div className='p-5'>
                                 <p className='font-bold cs-st'>
-                                    Statements cs
+                                    Statements
                                 </p>
 
                                 <ul className="list-disc ml-4">
@@ -84,7 +84,7 @@ function MainPage() {
                         <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
                                 <p className='font-bold cs-exp'>
-                                    Expressions cs
+                                    Expressions
                                 </p>
                                 <ul className="list-disc ml-4">
                                     {/* Operation, Read variable and Function call */}
@@ -113,7 +113,7 @@ function MainPage() {
                         <div style={{ width: '33.33%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
                             <div className='p-5'>
                                 <p className='font-bold cs-data'>
-                                    Data cs
+                                    Data
                                 </p>
                                 <ul className="list-disc ml-4">
                                     <li><Number /></li>
