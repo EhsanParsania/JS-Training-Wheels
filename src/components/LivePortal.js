@@ -53,8 +53,8 @@ const colorPallete = colorPalletes[2]
 const decorations = {
     statement: {
         classN: "ast-st",
-        definition: { tooltip: "Variable Definition Statement", classN: "ast-st-def" },
         expression: { tooltip: "Expression Evaluation Statement", classN: "ast-st-exp" },
+        declaration: { tooltip: "Variable declaration Statement", classN: "ast-st-dec" },
         UNKNOWN: { tooltip: "UNKNOWN Statement", classN: "ast-st-unk" },
     },
     expression: {
@@ -152,7 +152,7 @@ const Statement = ({ st, parent, parens }) => {
     if (st.type == "VariableDeclaration") {
         const { kind, declarations } = st
         const { init, id } = declarations[0]
-        st.category = "statement.definition"
+        st.category = "statement.declaration"
         component = <Def defBy={kind} name={id.name} setTo={init} parens={parens} parent={st} />
     }
 
