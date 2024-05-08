@@ -238,7 +238,7 @@ h2 {
   --delay-child1: 0s;
   --delay-child2: -0.1s;
   --delay-child3: -0.1s;
-  --highlight-kinds-color: #7b7b7b;
+  --highlight-kinds-color: #adadad;
   --delay-child1-standOut: calc(var(--delay-all) + var(--delay-child1));
   --delay-child1-goBack: calc(var(--delay-child1-standOut) + var(--duration-standOut) + var(--duration-wait));
   --delay-child2-standOut: calc(var(--delay-child1-goBack) + var(--duration-goBack) + var(--delay-child2));

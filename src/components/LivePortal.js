@@ -105,6 +105,10 @@ const code1 = `
   console.log(1,2, "Hello, " + name)
   console.log(1,something == "xxx" ? myArr[i+1] : false)
   //something == "xxx" ? myArr[i+1] : false
+  const emptyArray = []
+  const emptyObject = {}
+  const array = [1, 2, 3]
+  const object = {name: "John", age: 2, isMale: true, nestedProp: object["name"]}
 `
 
 function LivePortal() {
@@ -316,7 +320,12 @@ const NewArr = ({ items, parent, parens }) => {
     // TODO: in loop, set parent of sub expressions (each item)
     return <span className="data new arr">
         <span className="punc punc-new-arr punc-open">[</span>
-        <span className="punc punc-new-arr-item-sep punc-comma">,&nbsp;</span>
+        {items[0] && items.map((item, i) => {
+            return <span key={i} className="ast-arr-item">
+                <Expression expr={item} parens={parens} parent={parent} />
+                {i < items.length - 1 && <span className="punc punc-new-arr-item-sep punc-comma">,&nbsp;</span>}
+            </span>
+        })}
         <span className="punc punc-new-arr punc-close">]</span>
     </span>
 };
@@ -324,14 +333,28 @@ const NewObj = ({ props, parent, parens }) => {
     // TODO: in loop, set parent of sub expressions ( each computed name and each value)
     // Property key:expr value:expr computed:bool method:bool shorthand:bool
     return <span className="data new obj">
-        <span className="punc punc-new-obj punc-open">&#123;&nbsp;</span>
-        <span className="punc punc-new-obj-prop-exp punc-open">[</span>
-        "a"
-        <span className="punc punc-new-obj-prop-exp punc-close">]</span>
-        <span className="punc punc-new-obj-keyval-sep">:&nbsp;</span>
-        1
-        <span className="punc punc-new-obj-prop-sep punc-comma">,&nbsp;</span>
-        <span className="punc punc-new-obj punc-close">&nbsp;&#125;</span>
+        <span className="punc punc-new-obj punc-open">&#123;</span>
+        {
+            props.map((prop, i) => {
+                let key
+                if (prop.key.type == "Identifier") {
+                    key = <span className="ast-exp-var-name ast-exp-read-var-name">{prop.key.name}</span>
+                }
+                if (prop.key.type == "Literal") {
+                    key = <span className="ast-exp-data-literal ast-exp-data-str">{prop.key.raw}</span>
+                }
+                return <span key={i} className="ast-obj-prop ">
+                    {key}
+                    <span className="punc punc-colon punc-new-obj-prop-sep">:&nbsp;</span>
+                    <Expression expr={prop.value} parens={parens} parent={parent} />
+                    {i < props.length - 1 &&
+                        <span className="punc punc-comma punc-new-obj-prop-sep">,&nbsp;</span>
+                    }
+                </span>
+            }
+            )
+        }
+        <span className="punc punc-new-obj punc-close">&#125;</span>
     </span>
 };
 
