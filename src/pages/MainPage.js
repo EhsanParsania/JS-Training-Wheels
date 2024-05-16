@@ -23,23 +23,24 @@ function MainPage() {
                                 </p>
 
                                 <ul className="list-disc ml-4">
-                                    <li><span className='cs-st-exp'>Expression</span>
+                                    <li><span className='cs-st-exp'>Evaluate Single Expression</span>
                                         <ul className="list-disc ml-4">
-                                            <li>Useless</li>
-                                            <li>Useful</li>
+                                            <li>Useful: e.g. function calls and assignments</li>
+                                            <li>Useless: e.g. data & data evaluations</li>
                                         </ul>
                                     </li>
-                                    <li><span className='cs-st-dec-and-assign'>Declaration / assignment</span>
+                                    <li><span className='cs-st-dec-and-assign'>Declaration</span>
                                         <ul className="list-disc ml-4">
-                                            <li>Assign only</li>
-                                            <li>Useful</li>
-                                            <li>Declare & assign</li>
+                                            <li>Declare a Variable (within a scope)</li>
+                                            <li>Declare and Assign (initial value)</li>
+                                            <li>Declare a Named Function</li>
                                         </ul>
                                     </li>
                                     <li> <span className='cs-st-cond'>Conditional</span>
                                         <ul className="list-disc ml-4">
                                             <li>If</li>
                                             <li>Else</li>
+                                            <li>Switch</li>
                                         </ul>
                                         <li> <span className='cs-st-cond-loop'>
                                             Loop
@@ -50,31 +51,32 @@ function MainPage() {
                                                 </li>
                                                 <ul className="list-disc ml-4">
                                                     <li>3 Statements</li>
-                                                    <li>For/in</li>
-                                                    <li>For/of</li>
+                                                    <li>For-in</li>
+                                                    <li>For-of</li>
                                                 </ul>
                                                 <li>While
                                                     <ul className="list-disc ml-4">
-                                                        <li>Do/while</li>
                                                         <li>While</li>
+                                                        <li>Do/while</li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <span className='cs-st-exception'>Function</span>
+                                            <span className='cs-st-exception'>Code flow control</span>
                                         </li>
                                         <ul className="list-disc ml-4">
-                                            <li>Declaration</li>
                                             <li>Return</li>
                                             <li>Throw</li>
+                                            <li>Break</li>
+                                            <li>Continue</li>
                                         </ul>
                                         <li>
-                                            <span className='cs-st-exception'>Try/catch</span>
+                                            <span className='cs-st-exception'>Error Handling</span>
                                         </li>
                                         <ul className="list-disc ml-4">
-                                            <li>Try/Catch</li>
-                                            <li>Try/Catch/Finally</li>
+                                            <li>Try-Catch</li>
+                                            <li>Try-Catch-Finally</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -133,10 +135,13 @@ function MainPage() {
 
                 <div className="w-2/5 h-screen bg-gray-200">
                     <div style={{ height: '60%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
-                        Right top part
+                        <h2>Console (Outputs of code execution)</h2>
                     </div>
-                    <div style={{ height: '40%', backgroundColor: '#4b5563' }}>
-                        Right bottom part
+                    <div style={{ height: '40%', backgroundColor: 'white' }}>
+                        <h2>Memory Model (updates on execution steps)</h2>
+                        <p>
+                            <img src="/memory-model-demo.png" />
+                        </p>
                     </div>
                 </div>
 
