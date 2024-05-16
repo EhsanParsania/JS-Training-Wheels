@@ -1,8 +1,19 @@
-import React from 'react';
-import './index.css';
-import App from './App';
+import React from "react"
+import ReactDOM from "react-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Sandbox from './Sandbox'
 
-import ReactDOM from "react-dom";
+import './styles/index.css'
+import "./styles/styles.css"
+import "./styles/tailwind-pre-build.css"
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+function App() {
+  return (
+    <Router>
+      <Sandbox />
+    </Router>
+  )
+}
+
+const rootElement = document.getElementById("root")
+ReactDOM.render(<App />, rootElement)

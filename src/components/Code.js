@@ -1,8 +1,8 @@
 /* eslint-disable eqeqeq */
 
-import React from "react";
-import * as hermesParser from "hermes-parser";
-import * as _ from 'lodash';
+import React from "react"
+import * as hermesParser from "hermes-parser"
+import * as _ from 'lodash'
 
 // import * as ts from "typescript";
 // const ast = ts.createSourceFile("temp.ts", codeStr, ts.ScriptTarget.Latest);
@@ -94,32 +94,7 @@ const decorations = {
     },
 }
 
-
-const code1 = `
-2*3+4
-  a++
-  2*(3+4
-    );
-    (2*((3+(((4))))))
-    const z = (x) => x ** 2
-  console.log(1,2, "Hello, " + name)
-  console.log(1,something == "xxx" ? myArr[i+1] : false)
-  //something == "xxx" ? myArr[i+1] : false
-  const emptyArray = []
-  const emptyObject = {}
-  const array = [1, 2, 3]
-  const object = {name: "John", age: 2, isMale: true, nestedProp: object["name"]}
-`
-
-function LivePortal() {
-    return (
-        <div>
-            <Code fromAstOf={code1} />
-        </div>
-    );
-}
-
-const Code = ({ fromAstOf, ast, parent, parens, debug }) => {
+export default function Code ({ fromAstOf, ast, parent, parens, debug }) {
     let isRoot = false
     if (!ast) {
         ast = astOf(fromAstOf)
@@ -508,5 +483,3 @@ const Call = ({ expr, args, parent, parens }) => {
         <span className="punc punc-call punc-close">)</span>
     </>
 };
-
-export { LivePortal }

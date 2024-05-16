@@ -1,9 +1,25 @@
-import React from 'react';
-import { LivePortal } from '../components/LivePortal';
-import { Unary, Binary, Ternary, FromVariable, FromPropByStaticName, FromPropByDynamicName, FunctionCall } from '../components/expressions';
-import { Number, Boolean, String, Null, Undefined, Object, Array, Function, ArrowFunction } from '../components/data';
+import React from "react"
+import Code from './components/Code'
+import { Unary, Binary, Ternary, FromVariable, FromPropByStaticName, FromPropByDynamicName, FunctionCall } from './components/cheat-sheet/expressions'
+import { Number, Boolean, String, Null, Undefined, Object, Array, Function, ArrowFunction } from './components/cheat-sheet/data'
 
-function MainPage() {
+const code1 = `
+2*3+4
+  a++
+  2*(3+4
+    );
+    (2*((3+(((4))))))
+    const z = (x) => x ** 2
+  console.log(1,2, "Hello, " + name)
+  console.log(1,something == "xxx" ? myArr[i+1] : false)
+  //something == "xxx" ? myArr[i+1] : false
+  const emptyArray = []
+  const emptyObject = {}
+  const array = [1, 2, 3]
+  const object = {name: "John", age: 2, isMale: true, nestedProp: object["name"]}
+`
+
+export default function Sandbox() {
 
     return (
         <div className="h-screen">
@@ -11,7 +27,11 @@ function MainPage() {
 
                 <div className="w-3/5 h-screen bg-gray-200 left-side">
                     <div className="h-full overflow-auto" style={{ height: '70%', scrollbarWidth: 'thin' }}>
-                        <LivePortal />
+                        <h2 className='font-bold m-2'>Code Editor</h2>
+                        <div>
+                            {/* <textarea value={code1} rows={5} /> */}
+                            <Code fromAstOf={code1} />
+                        </div>
                     </div>
 
                     <div className="h-full overflow-auto flex" style={{ height: '30%', scrollbarWidth: 'thin' }}>
@@ -57,7 +77,7 @@ function MainPage() {
                                                 <li>While
                                                     <ul className="list-disc ml-4">
                                                         <li>While</li>
-                                                        <li>Do/while</li>
+                                                        <li>Do-while</li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -89,26 +109,28 @@ function MainPage() {
                                     Expressions
                                 </p>
                                 <ul className="list-disc ml-4">
-                                    {/* Operation, Read variable and Function call */}
-                                    <li><span className='cs-exp-op'>Operation</span>
+                                    <li>
+                                        <span className='cs-exp-read'>Read variable</span>
+                                        <ul className="list-disc ml-4">
+                                            <li> <FromVariable /> </li>
+                                            <li>
+                                                <span className='cs-exp-read-prop'>From property</span>
+                                                <ul className="list-disc ml-4">
+                                                    <li> <FromPropByStaticName /> </li>
+                                                    <li> <FromPropByDynamicName /> </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> <FunctionCall /> </li>
+                                    <li>
+                                        <span className='cs-exp-op'>Operation</span>
                                         <ul className="list-disc ml-4">
                                             <li><Unary /></li>
                                             <li><Binary /></li>
                                             <li><Ternary /></li>
                                         </ul>
                                     </li>
-                                    <li><span className='cs-exp-read'>Read variable</span> </li>
-                                    <ul className="list-disc ml-4">
-                                        <li> <FromVariable /> </li>
-                                        <li>
-                                            <span className='cs-exp-read-prop'>From property</span>
-                                        </li>
-                                        <ul className="list-disc ml-4">
-                                            <li> <FromPropByStaticName /> </li>
-                                            <li> <FromPropByDynamicName /> </li>
-                                        </ul>
-                                    </ul>
-                                    <li> <FunctionCall /> </li>
                                 </ul>
                             </div>
                         </div>
@@ -134,20 +156,17 @@ function MainPage() {
                 </div>
 
                 <div className="w-2/5 h-screen bg-gray-200">
-                    <div style={{ height: '60%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
-                        <h2>Console (Outputs of code execution)</h2>
+                    <div style={{ height: '30%', backgroundColor: '#d1d5db', overflow: 'auto', scrollbarWidth: 'thin' }}>
+                        <h2 className='font-bold m-2'>Console (Outputs of code execution)</h2>
                     </div>
-                    <div style={{ height: '40%', backgroundColor: 'white' }}>
-                        <h2>Memory Model (updates on execution steps)</h2>
+                    <div style={{ height: '70%', backgroundColor: 'white' }}>
+                        <h2 className='font-bold m-2'>Memory Model (updates on execution steps)</h2>
                         <p>
-                            <img src="/memory-model-demo.png" />
+                            <img src="/memory-model-demo.png" style={{ width: 500, padding: 20 }} />
                         </p>
                     </div>
                 </div>
-
             </div>
         </div >
     );
 }
-
-export { MainPage };
